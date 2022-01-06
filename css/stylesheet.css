@@ -1,3 +1,98 @@
-h1{
-    color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Merriweather:wght@700&family=Sintony:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+
+    --blue: #1C5687;
+    --darkBlue: #18405A;
+    --grey: #DEDEDE;
+    --darkGrey: #333333;
 }
+
+/* TEXT */
+h1{
+    font-family: 'Merriweather', serif;
+    color: var(--blue);
+    font-size: 30px;
+}
+
+p{
+    font-family: 'Sintony', sans-serif;
+    color: var(--darkGrey);
+    font-size: 16px;
+}
+/* END TEXT */
+
+/* HELPER */
+.padding{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.blue{
+    background-color: var(--blue);
+}
+
+.right{
+    float: right;
+}
+/* END HELPER */
+
+#navbar{
+    font-family: 'Sintony', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#navBtns{
+    display: inline-flex;
+    padding-left: 70px;
+}
+
+.navBtn{
+    padding: 10px;
+    cursor: pointer;
+}
+.navBtn:hover{
+    background-color: var(--darkBlue);
+}
+
+#left-flex{
+    display: inline-flex;
+    justify-content: flex-end;
+    float: right;
+}
+
+#header{
+    float: left;
+}
+
+#logo{
+    float: left;
+}
+
+.navIcon{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+#greyBtn{
+    background-color: var(--grey);
+    color:var(--darkBlue);
+    display: inline;
+    padding: 10px;
+}
+
+#search{
+    background-color: var(--darkBlue);
+    color: white;
+    padding: 10px;
+}
+
