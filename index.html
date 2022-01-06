@@ -10,8 +10,8 @@
 
     <body>
         <!-- Navbar -->
-        <section id="navbar">
-            <div class="blue">
+        <div id="navbar">
+            <div id="navLinks" class="blue">
                 <div id="navBtns">
                     <div class="navBtn">Home</div>
                     <div class="navBtn">About Us</div>
@@ -20,9 +20,9 @@
                     <div class="navBtn">Board</div>
                     <div class="navBtn">Families</div>
                 </div>
-                <div id="left-flex">
+                <div id="rightNav">
                     <div id="greyBtn">
-                        <img src="imgs/SVG/Search Icons/Arrow.svg" alt="arrow">
+                        <img id="arrow1" src="imgs/SVG/Photo Rotator Controls/Arrow.svg" alt="arrow">
                         <p>Schools</p>
                     </div>
                     <div id="search">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!-- end nav links -->
             <div class="padding">
                 <div id="header">
                     <img id="logo" src="imgs/logo.png" alt="logo"/>
@@ -38,7 +38,7 @@
                     <p>Let's Advnace Learning</p>
                 </div>
 
-                <div class="right">
+                <div id="navIcons" class="right">
                     <div class="navIcon">
                         <img class="icon" src="imgs/SVG/Global Icons/Envelope 5.svg" alt="Envelope"/>
                         <p>Contact Us</p>
@@ -53,17 +53,72 @@
                     </div>
                 </div>  
             </div>
-        </section>
-        <!-- end nav -->
+        </div>
+        <!-- end nav div -->
 
         <!-- image rotator -->
-        <section></section>
+        <div id="slideshow">
+            
+            <div id="slide1">
+                <img class="slideImg" src="imgs/main/main.png" alt="teacher with students"/>
+                <div id="slideControls">
+                    <div class="controls" id="prev"><img src="imgs/SVG/Photo Rotator Controls/Arrow.svg"/></div>
+                    <div class="controls" id="pause"><img src="imgs/SVG/Photo Rotator Controls/Pause.svg"/></div>
+                    <div class="controls" id="next"><img src="imgs/SVG/Photo Rotator Controls/Arrow.svg"/></div>
+                </div>
+            </div>
+
+            <div id="slide2">
+                <img class="slideImg" src="imgs/main/soccer.png" alt="soccer ball on grass"/>
+                <div id="overlay">
+                    <div id="overlayContent">
+                        <h3>Welcome to Our School</h3>
+                        <p>Ullamcorper arcu ante duis mus condimentum dapibus ullamcorper venenatis torquent parturient condimentum facilisis diam lacinia.</p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
 
         <!-- current news -->
-        <section></section>
+        <div class="padding" id="currentNews">
+            
+            <div style="width: 100%;">
+                <h2>Current News</h2>
+                <button class="right">More</button>
+            </div>
+
+            <div id="newsItems">
+
+                <div class="newsItem">
+                    <img src="imgs/news/books.png" alt="stack of books"/>
+                    <h4>Studnt Book Fair</h4>
+                    <p>Ullamcorper arcu ante duis mus condimentum dapibus ullamcorper venenatis torquent parturient condimentum facilisis diam lacinia.</p>
+                </div>
+
+                <div class="newsItem">
+                    <img src="imgs/news/headphones.png" alt="student using laptop"/>
+                    <h4>Personalized Learning</h4>
+                    <p>Ullamcorper arcu ante duis mus condimentum dapibus ullamcorper venenatis torquent parturient condimentum facilisis diam lacinia.</p>
+                </div>
+
+                <div class="newsItem">
+                    <img src="imgs/news/stopsign.png" alt="stopsign on school bus"/>
+                    <h4>Bus Safety Month</h4>
+                    <p>Ullamcorper arcu ante duis mus condimentum dapibus ullamcorper venenatis torquent parturient condimentum facilisis diam lacinia.</p>
+                </div>
+
+                <div class="newsItem">
+                    <img src="imgs/news/girl.png" alt="girl with notebook"/>
+                    <h4>After School Tutoring</h4>
+                    <p>Ullamcorper arcu ante duis mus condimentum dapibus ullamcorper venenatis torquent parturient condimentum facilisis diam lacinia.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Announcments and Shortcuts -->
-        <section></section>
+        <div></div>
 
         <!-- footer -->
         <footer></footer>

@@ -23,6 +23,18 @@ p{
 }
 /* END TEXT */
 
+button{
+    background-color: var(--darkBlue);
+    color: white;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    border-radius: 5px 5px 5px 5px;
+    border:none;
+    padding: 10px;
+    cursor: pointer;
+}
+
 /* HELPER */
 .padding{
     padding-left: 70px;
@@ -36,12 +48,14 @@ p{
 .right{
     float: right;
 }
+
 /* END HELPER */
 
 #navbar{
     font-family: 'Sintony', sans-serif;
     font-weight: bold;
     color: white;
+    margin-bottom: 20px;
 }
 
 #navBtns{
@@ -57,18 +71,26 @@ p{
     background-color: var(--darkBlue);
 }
 
-#left-flex{
+#navLinks{
+    height:5vw;
+    margin-bottom: 20px;
+}
+
+#rightNav{
     display: inline-flex;
     justify-content: flex-end;
     float: right;
+    height: 100%;
 }
 
 #header{
     float: left;
+    width: 70%;
 }
 
 #logo{
     float: left;
+    margin-right: 20px;
 }
 
 .navIcon{
@@ -85,9 +107,14 @@ p{
 
 #greyBtn{
     background-color: var(--grey);
-    color:var(--darkBlue);
-    display: inline;
+    color:var(--blue);
+    display: inline-flex;
     padding: 10px;
+}
+
+#arrow1{
+    transform: rotate(180deg); 
+    height: 50%;
 }
 
 #search{
@@ -95,4 +122,88 @@ p{
     color: white;
     padding: 10px;
 }
+
+/* END NAV AND HEADER STYLES */
+
+#slideshow{
+    width:100%;
+    height: 30vw;
+    display: inline-block;
+}
+
+.slideImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 0 0;
+}
+
+#slide1{
+    display: inline-block;
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+#slide2{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+
+#overlay{
+    width: 100%;
+    height: 100%;
+    float: right;
+    background-color: rgba(28, 86, 135, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+#overlayContent{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#slideControls{
+    display: inline-flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* width: 100%; */
+}
+
+.controls{
+    width: 30px;
+    height: 30px;
+    background-color: var(--blue);
+    margin: 10px;
+    border-radius: 5px 5px 5px 5px;
+    border:none;
+    padding: 5px;
+    cursor: pointer;
+}
+/* END SLIDESHOW STYLES */
+
+#currentNews{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#newsItems{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.newsItem{
+    width: 22%;
+}
+.newsItem img{
+    width: 100%;
+}
+
+
 
