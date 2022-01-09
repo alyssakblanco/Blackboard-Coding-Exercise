@@ -14,28 +14,38 @@
 h1{
     font-family: 'Merriweather', serif;
     color: var(--blue);
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 h2{
     font-family: 'Merriweather', serif;
     color: var(--blue);
-    font-size: 34px;  
+    font-size: 2rem;  
 }
 h3{
     font-family: 'Merriweather', serif;
     color: var(--blue);
-    font-size: 22px; 
+    font-size: 1.3rem; 
+    margin-bottom: 1.5rem;
 }
 h4{
     font-family: 'Sintony', sans-serif;
     color: var(--blue);
-    font-size: 22px;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+h4:hover{
+    border-bottom: 2px solid var(--blue);
 }
 p{
     font-family: 'Sintony', sans-serif;
     color: var(--darkGrey);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
+}
+.serif{
+    font-family: 'Merriweather', serif;
 }
 
 /* END TEXT */
@@ -63,34 +73,43 @@ button:hover{
 
 /* HELPER */
 .padding{
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
 .blue{
     background-color: var(--blue);
 }
+.white{
+    color: white;
+}
 
 .right{
     float: right;
 }
-
+.topMargin{
+    margin-top: 1rem;
+}
 /* END HELPER */
 
 #navbar{
     font-family: 'Sintony', sans-serif;
     font-weight: bold;
+    font-size: 1rem;
     color: white;
-    margin-bottom: 20px;
 }
 
 #navBtns{
     display: inline-flex;
-    padding-left: 70px;
+    padding-left: 6vw;
+    align-items: stretch;
+    height: 100%;
 }
 
 .navBtn{
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
     cursor: pointer;
 }
 .navBtn:hover{
@@ -98,8 +117,8 @@ button:hover{
 }
 
 #navLinks{
-    height:5vw;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    height: 3.5rem;
 }
 
 #rightNav{
@@ -111,18 +130,20 @@ button:hover{
 
 #header{
     float: left;
-    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 #logo{
     float: left;
-    margin-right: 20px;
+    margin-right: 1rem;
 }
 
 .navIcon{
     display: inline-flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 1rem;
     cursor: pointer;
 }
 
@@ -143,28 +164,32 @@ button:hover{
 
 #greyBtn{
     background-color: var(--grey);
-    color:var(--blue);
     display: inline-flex;
-    padding: 10px;
+    align-items: center;
+    padding: 1rem;
+    text-transform: uppercase;
 }
 
 #arrow1{
     transform: rotate(180deg); 
-    height: 50%;
+    height: 1rem;
     fill: var(--darkBlue);
+    margin-right: 0.5rem;
 }
 
 #search{
     background-color: var(--darkBlue);
     color: white;
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 /* END NAV AND HEADER STYLES */
 
 #slideshow{
     width:100%;
-    height: 30vw;
+    height: 40vw;
     display: inline-block;
 }
 
@@ -192,61 +217,83 @@ button:hover{
 #overlay{
     width: 100%;
     height: 100%;
-    float: right;
     background-color: var(--opaqueBlue);
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 #overlayContent{
-    margin-top: 50px;
-    margin-left: 20px;
+    width: 75%;
+    height: auto;
 }
 
 #slideControls{
     display: inline-flex;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    /* width: 100%; */
+    bottom: 0.75rem;
+    right: 0.55rem;
 }
 
 .controls{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
     background-color: var(--opaqueBlue);
-    margin: 10px;
+    margin-right: 0.3rem;
     border-radius: 5px 5px 5px 5px;
-    border:none;
+    border-width: 1px; 
+    border-style: solid;
+    border-color: transparent;
     padding: 5px;
     cursor: pointer;
+}
+.controls:hover{
+    background-color: #F7F7F7;
+    border-width: 1px; 
+    border-style: solid;
+    border-color: #7D9299;
 }
 .controls svg{
     width: 70%;
     height: 70%;
+    fill:white;
 }
 /* END SLIDESHOW STYLES */
 
 #currentNews{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
 }
 
 #newsItems{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .newsItem{
     width: 22%;
+    overflow: hidden;
+}
+.imgContain{
+    width: 100%;
+    height:40%;
+    overflow: hidden;
 }
 .newsItem img{
     width: 100%;
+    height: 100%;
+    transition: all 2s ease;
+    
+}
+.newsItem img:hover{
+    transform: scale(1.2);
 }
 
 /* END CURRENT NEWS STYLES */
@@ -258,41 +305,106 @@ button:hover{
 
 .contentSqaure{
     display: inline-block;
-    width: 40%;
+    width: 42%;
     background-color: white;
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+hr{
+    border:none;
+    background-color: var(--darkGrey);
+    height: 1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomBorder{
+    display: block;
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.bottomBorder:hover{
+    border-bottom: 4px solid var(--blue);
+}
+
+.blueLink{
+    font-family: 'Sintony', sans-serif;
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.blueLink:hover{
+    border-bottom: 2px solid var(--blue);
+}
+
+.blueTxt{
+    font-family: 'Sintony', sans-serif;
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 /* END ADDITIONAL INFO STYLES */
 
 footer{
-    text-align: center;
-    display: inline-block;
-    width: 100%;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
 #footerLine{
     position: relative;
-    height: 5px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    height: 1px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: var(--darkBlue);
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
 #footerBtns{
     position: absolute;
-    left: 50%;
-    top: -300%;
+    top: -2000%;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.moreLinks{
+    display: inline-flex;
+    width: 60%;
+    justify-content: space-between;
 }
 
 #socials{
-    padding-left: 35%;
-    padding-right: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+#socialIcons{
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
+#socialIcons img{
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    transition: top ease 0.5s;
+}
+#socialIcons img:hover{
+    top: -5px; 
+}
+
