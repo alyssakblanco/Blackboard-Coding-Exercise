@@ -47,6 +47,17 @@ p{
 .serif{
     font-family: 'Merriweather', serif;
 }
+.blueLink{
+    font-family: 'Sintony', sans-serif;
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.blueLink:hover{
+    color: var(--darkBlue);
+    border-bottom: 2px solid var(--darkBlue);
+}
 
 /* END TEXT */
 
@@ -90,6 +101,9 @@ button:hover{
 .topMargin{
     margin-top: 1rem;
 }
+.botMargin{
+    margin-bottom: 1rem;
+}
 /* END HELPER */
 
 #navbar{
@@ -121,11 +135,59 @@ button:hover{
     height: 3.5rem;
 }
 
+.navDrop{
+    position: relative;
+    display: inherit;
+}
+.navDropLinks{
+    display: none;
+    flex-direction: column;
+    width: 15em;
+    height: auto;
+    justify-content: space-between;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px #00000075;
+    z-index: 1;
+    top: 100%;
+    padding: 1em;
+}
+.navDrop:hover .navDropLinks{
+    display: flex;
+}
+
 #rightNav{
     display: inline-flex;
     justify-content: flex-end;
     float: right;
     height: 100%;
+}
+
+.navDropSearch{
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0px 10px #00000075;
+    z-index: 1;
+    top: 100%;
+    padding: 1em;
+}
+.navDrop:hover .navDropSearch{
+    display: flex;
+}
+
+.navDropSearch img:hover{
+    cursor: pointer;
+}
+input{
+    margin-right: 1rem;
+    background-color: #F7F7F7;
+    border: 1px solid var(--darkGrey);
+    border-radius: 4px;
+    font-family: 'Sintony', sans-serif;
+    font-size: 1rem;
+    padding: 0.75rem;
+    width: 15em;
 }
 
 #header{
@@ -167,6 +229,11 @@ button:hover{
     display: inline-flex;
     align-items: center;
     padding: 1rem;
+    cursor: pointer;
+}
+#greyBtn p{
+    color:var(--darkBlue); 
+    font-weight:bold;
     text-transform: uppercase;
 }
 
@@ -177,12 +244,13 @@ button:hover{
     margin-right: 0.5rem;
 }
 
-#search{
+#searchBtn{
     background-color: var(--darkBlue);
     color: white;
     padding: 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 /* END NAV AND HEADER STYLES */
@@ -283,13 +351,14 @@ button:hover{
 }
 .imgContain{
     width: 100%;
-    height:40%;
+    height: 10em;
     overflow: hidden;
 }
 .newsItem img{
     width: 100%;
     height: 100%;
-    transition: all 2s ease;
+    object-fit: cover;
+    transition: all 0.3s ease;
     
 }
 .newsItem img:hover{
@@ -328,17 +397,6 @@ hr{
 }
 .bottomBorder:hover{
     border-bottom: 4px solid var(--blue);
-}
-
-.blueLink{
-    font-family: 'Sintony', sans-serif;
-    color: var(--blue);
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-.blueLink:hover{
-    border-bottom: 2px solid var(--blue);
 }
 
 .blueTxt{
