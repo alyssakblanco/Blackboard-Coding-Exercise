@@ -87,6 +87,12 @@ button:hover{
     padding-left: 6vw;
     padding-right: 6vw;
 }
+@media screen  and (max-width: 639px){
+    .padding{
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
 
 .blue{
     background-color: var(--blue);
@@ -133,6 +139,14 @@ button:hover{
 #navLinks{
     margin-bottom: 1rem;
     height: 3.5rem;
+}
+@media screen  and (max-width: 1023px){
+    #navLinks{
+        display: none;
+    }
+    #navIcons{
+        display: none;
+    }
 }
 
 .navDrop{
@@ -195,6 +209,19 @@ input{
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+}
+@media screen  and (max-width: 1023px){
+    #header{
+        float: none;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 639px){
+    #header{
+        flex-direction: column;
+        text-align: center;
+        row-gap: 1em;
+    }
 }
 
 #logo{
@@ -332,6 +359,36 @@ input{
     height: 70%;
     fill:white;
 }
+
+@media screen and (max-width: 1023px){
+    #slideshow{
+        height: auto;
+    }
+    #slide1{
+        width: 100%;
+    }
+    #slide2{
+        display: none;    
+    }
+    #overlayMobile{
+        background-color: var(--opaqueBlue);
+        padding: 1em 3em;
+    }
+}
+@media screen and (max-width: 639px){
+    #overlayMobile{
+        padding: 1em 0;
+    }
+    #overlayContent {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    #overlayContent button{
+        margin: auto;
+        margin-top: 1em
+    }
+}
 /* END SLIDESHOW STYLES */
 
 #currentNews{
@@ -363,6 +420,28 @@ input{
 }
 .newsItem img:hover{
     transform: scale(1.2);
+}
+
+@media screen  and (max-width: 1023px){
+    #newsItems{
+        flex-wrap: wrap;
+        row-gap: 2em;
+    }
+    .newsItem{
+        width:45%;
+    }
+}
+@media screen  and (max-width: 639px){
+    .newsItem{
+        width: 100%;
+    }
+    #sectionHead h2, button{
+        display: block !important;
+        float: none !important;
+    }
+    h2{
+        margin-bottom: 0.5em;
+    }
 }
 
 /* END CURRENT NEWS STYLES */
@@ -405,6 +484,27 @@ hr{
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media screen  and (max-width: 1023px){
+    #additionalInfo{
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+    .contentSqaure{
+        width: auto;
+        margin-bottom: 0;
+    }
+}
+@media screen  and (max-width: 639px){
+    #additionalInfo{
+        background-color: white;
+    }
+    .contentSqaure{
+        margin: auto;
+        margin-top: 3em;
+        padding: 0;
+    }
 }
 
 /* END ADDITIONAL INFO STYLES */
@@ -465,4 +565,54 @@ footer{
 #socialIcons img:hover{
     top: -5px; 
 }
+@media screen  and (max-width: 1023px){
+    .moreLinks{
+        width: 80%;
+    }
+    #footerBtns{
+        width: 40%;
+    }
+}
+@media screen  and (max-width: 639px){
+    footer{
+        border-top: 6px solid var(--darkBlue);
+        padding-top: 2em;
+        margin-top: 0;
+    }
+    #socialIcons{
+        width: 60%;
+    }
+}
 
+/* MOBILE STYLES */
+/* TABLET */
+
+#mobileNavbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+#hamburger{
+    display: flex;
+    align-items: center;
+    padding-left: 6vw;
+}
+
+#mobileDropLinks{
+    background-color: var(--blue);
+}
+@media screen  and (max-width: 1023px){
+    #navBtns{
+        display: block;
+        padding-left: 0;
+    }
+    .navBtn{
+        padding-left: 6vw;
+    }
+    .navDropLinks{
+        display: flex;
+        width: 100%;
+        position: relative;
+        box-shadow: none;
+    }
+}
