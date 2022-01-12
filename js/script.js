@@ -51,6 +51,9 @@ var slide2 = document.getElementsByClassName('slideImg')[1];
 var title = document.getElementById('title');
 var title2 = document.getElementById('titleMob');
 
+var autoPlay = setInterval(nextSlide, 5000);
+var playing = true;
+
 slide1.src = slideImgs[0];
 slide2.src = slideImgs[1];
 title.innerHTML = headings[0];
@@ -76,6 +79,8 @@ function nextSlide(){
     slide2.src = slideImgs[j];
     title.innerHTML = headings[i];   
     title2.innerHTML = headings[i];
+    clearInterval(autoPlay);
+    autoPlay = setInterval(nextSlide, 5000);
 }
 
 function prevSlide(){
@@ -95,10 +100,9 @@ function prevSlide(){
     slide2.src = slideImgs[j];
     title.innerHTML = headings[i]; 
     title2.innerHTML = headings[i];  
+    clearInterval(autoPlay);
+    autoPlay = setInterval(nextSlide, 5000);
 }
-
-var autoPlay = setInterval(nextSlide, 4000);
-var playing = true;
 
 function pause(){
     if(playing){
@@ -106,6 +110,6 @@ function pause(){
         clearInterval(autoPlay);
     }else{
         playing = true;
-        autoPlay = setInterval(nextSlide, 4000);
+        autoPlay = setInterval(nextSlide, 5000);
     }
 }

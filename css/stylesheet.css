@@ -497,7 +497,7 @@ input{
         margin-bottom: 0.5em;
     }
     .imgContain{
-        height: 70vw;
+        height: 60vw;
     }
 }
 
@@ -558,7 +558,6 @@ hr{
         background-color: white;
     }
     .contentSqaure{
-        margin: auto;
         margin-top: 3em;
         padding: 0;
     }
@@ -589,10 +588,11 @@ footer{
 
 #footerBtns{
     position: absolute;
-    top: -2000%;
-    width: 27%;
+    top: -1.5em;
     display: flex;
-    justify-content: space-between;
+}
+#toTop{
+    margin-left: 0.5rem;
 }
 #toTop svg{
     transform: rotate(90deg);
@@ -623,6 +623,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 12em;
 }
 #socialIcons img{
     cursor: pointer;
@@ -647,9 +648,7 @@ footer{
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
-    #footerBtns{
-        width: 43%;
-    }
+    
 }
 @media screen and (max-width: 639px){
     footer{
@@ -674,8 +673,8 @@ footer{
     #socialIcons{
         width: 60%;
     }
-    #footerBtns{
-        width: 85%;
+    #toTop{
+        margin-left: 0.25rem;
     }
 }
 
