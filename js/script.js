@@ -18,9 +18,33 @@ function toggleSearch(){
     }
 }
 
+//mobile menu drop
+var b = document.getElementById("mobileDropLinks");
+b.style.display = "none"; 
+
+function openMenu(){
+    if(b.style.display === "none"){
+        b.style.display = "block"
+    }else{
+        b.style.display = "none"
+    }
+}
+
+//mobile search
+var a = document.getElementById("mobileSearch");
+a.style.display = "none";
+
+function toggleSearchMobile(){
+    if(a.style.display === "none"){
+        a.style.display = "flex"
+    }else{
+        a.style.display = "none"
+    }
+}
+
 // slideshow functions
 let slideImgs = ['imgs/main/main.png','imgs/main/soccer.png','imgs/main/library.jpg','imgs/main/students.jpg'];
-let headings = ['Welcome to Our School','Soccer Tryouts','Library Appreciation Month','SAT Prep'];
+let headings = ['Welcome to Our Site!','Soccer Tryouts','Library Appreciation Month','Early SAT Prep'];
 
 var slide1 = document.getElementsByClassName('slideImg')[0];
 var slide2 = document.getElementsByClassName('slideImg')[1];
@@ -59,7 +83,6 @@ function prevSlide(){
         i = 3;
     }else{
         i--;
-        console.log(i);
     }
     
     if(j <= 0){
