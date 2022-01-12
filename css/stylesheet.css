@@ -717,6 +717,7 @@ footer{
         width: 100%;
         position: relative;
         box-shadow: none;
+        padding-left: 6vw;
     }
 }
 
