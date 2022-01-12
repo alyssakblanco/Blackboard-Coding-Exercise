@@ -177,7 +177,7 @@ button:hover{
     height: 100%;
 }
 
-.navDropSearch{
+#navDropSearch{
     display: none;
     position: absolute;
     background-color: white;
@@ -186,11 +186,11 @@ button:hover{
     top: 100%;
     padding: 1em;
 }
-.navDrop:hover .navDropSearch{
+/* .navDrop:hover #navDropSearch{
     display: flex;
-}
+} */
 
-.navDropSearch img:hover{
+#navDropSearch img:hover{
     cursor: pointer;
 }
 input{
@@ -262,6 +262,19 @@ input{
     color:var(--darkBlue); 
     font-weight:bold;
     text-transform: uppercase;
+}
+#greyBtn:hover{
+    background-color: var(--darkBlue);
+}
+#greyBtn:hover p{
+    color: white;
+}
+#greyBtn svg{
+    transition: all 0.3s ease;
+}
+#greyBtn:hover svg{
+    fill: white;
+    transform: rotate(270deg);
 }
 
 #arrow1{
@@ -359,6 +372,13 @@ input{
     height: 70%;
     fill:white;
 }
+.controls:hover svg{
+    fill:var(--blue);
+}
+
+#overlayMobile{
+    display: none;
+}
 
 @media screen and (max-width: 1023px){
     #slideshow{
@@ -371,7 +391,8 @@ input{
         display: none;    
     }
     #overlayMobile{
-        background-color: var(--opaqueBlue);
+        display: block;
+        background-color: var(--blue);
         padding: 1em 3em;
     }
 }
@@ -418,8 +439,15 @@ input{
     transition: all 0.3s ease;
     
 }
-.newsItem img:hover{
-    transform: scale(1.2);
+
+.newsItem:hover {
+    cursor: pointer;   
+}
+.newsItem:hover img{
+    transform: scale(1.2);   
+}
+.newsItem:hover h4{
+    border-bottom: 2px solid var(--blue);  
 }
 
 @media screen  and (max-width: 1023px){
@@ -536,11 +564,21 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+#toTop svg{
+    transform: rotate(90deg);
+    margin-right: 0.5em;
+    fill: white;
+}
+#toTop:hover svg{
+    fill: var(--blue);
+}
 
-.moreLinks{
-    display: inline-flex;
-    width: 60%;
-    justify-content: space-between;
+#contact{
+    line-height: 2;
+} 
+#contact .tablet, .mobile{
+    display: none;
+    text-align: center;
 }
 
 #socials{
@@ -566,8 +604,11 @@ footer{
     top: -5px; 
 }
 @media screen  and (max-width: 1023px){
-    .moreLinks{
-        width: 80%;
+    #contact .tablet{
+        display: block;
+    }
+    #contact .desk, .mobile{
+        display: none;
     }
     #footerBtns{
         width: 40%;
@@ -578,6 +619,19 @@ footer{
         border-top: 6px solid var(--darkBlue);
         padding-top: 2em;
         margin-top: 0;
+    }
+    #contact .mobile{
+        display: block;
+        line-height: 1.5;
+    }
+    #contact .desk, .tablet{
+        display: none !important;
+    }
+    #siteLinks .mobile, .blueLink{
+        display: block;
+    }
+    #siteLinks .desk{
+        display: none;
     }
     #socialIcons{
         width: 60%;
