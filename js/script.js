@@ -54,15 +54,27 @@ var title2 = document.getElementById('titleMob');
 var autoPlay = setInterval(nextSlide, 5000);
 var playing = true;
 
-slide1.src = slideImgs[0];
-slide2.src = slideImgs[1];
-title.innerHTML = headings[0];
-title2.innerHTML = headings[0];
-
 var i = 0;
 var j = 1;
 
+slide1.src = slideImgs[i];
+slide2.src = slideImgs[j];
+title.innerHTML = headings[i];
+title2.innerHTML = headings[i];
+
+
+function setSlides(i,j){
+    slide1.src = slideImgs[i];
+    slide2.src = slideImgs[j];
+    title.innerHTML = headings[i];   
+    title2.innerHTML = headings[i];
+}
+
 function nextSlide(){ 
+    clearInterval(autoPlay);
+    autoPlay = null;
+    playing = true;
+
     if(i == slideImgs.length - 1){
         i = 0;
     }else{
@@ -75,15 +87,15 @@ function nextSlide(){
         j++;
     }
 
-    slide1.src = slideImgs[i];
-    slide2.src = slideImgs[j];
-    title.innerHTML = headings[i];   
-    title2.innerHTML = headings[i];
-    clearInterval(autoPlay);
+    setSlides(i,j);
     autoPlay = setInterval(nextSlide, 5000);
 }
 
 function prevSlide(){
+    clearInterval(autoPlay);
+    autoPlay = null;
+    playing = true;
+
     if(i <= 0){
         i = 3;
     }else{
@@ -96,11 +108,7 @@ function prevSlide(){
         j--;
     }
 
-    slide1.src = slideImgs[i];
-    slide2.src = slideImgs[j];
-    title.innerHTML = headings[i]; 
-    title2.innerHTML = headings[i];  
-    clearInterval(autoPlay);
+    setSlides(i,j); 
     autoPlay = setInterval(nextSlide, 5000);
 }
 
@@ -108,6 +116,7 @@ function pause(){
     if(playing){
         playing = false;
         clearInterval(autoPlay);
+        autoPlay = null;
     }else{
         playing = true;
         autoPlay = setInterval(nextSlide, 5000);
